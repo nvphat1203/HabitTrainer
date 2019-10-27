@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical"
+    tools:context=".CreateHabitActivity">
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/eat_an_apple"/>
+
+    <EditText
+        android:id="@+id/et_description"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/apple_des"/>
+
+    <Button
+        android:id="@+id/btn_choose_image"
+        android:onClick="chooseImage"
+        android:text="@string/choose_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:contentDescription="@string/selected_image"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:onClick="storeHabit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"/>
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:visibility="visible"
+        android:textColor="#e53935"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
